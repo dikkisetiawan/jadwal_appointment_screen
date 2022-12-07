@@ -138,17 +138,16 @@ class JadwalAppointmentScreen extends StatelessWidget {
         const SizedBox(
           height: defaultMargin / 4,
         ),
-        Row(
-          children: [
-            Text('Waktu Awal : ',
-                style: blackTextStyle.copyWith(fontWeight: FontWeight.bold)),
-            Text(
-                ' ${waktu?.day ?? 0} - ${waktu?.month} - ${waktu?.year ?? 0}  ${waktu?.hour ?? 0}:${waktu?.second ?? 0}',
-                style: blackTextStyle),
-          ],
-        ),
+        Text('Waktu Awal : ',
+            style: blackTextStyle.copyWith(fontWeight: FontWeight.bold)),
         const SizedBox(
-          height: defaultMargin / 4,
+          height: 3,
+        ),
+        Text(
+          ' ${waktu?.day ?? 0} - ${waktu?.month} - ${waktu?.year ?? 0}  ${waktu?.hour ?? 0}:${waktu?.second ?? 0}',
+          style: blackTextStyle,
+          overflow: TextOverflow.ellipsis,
+          maxLines: 3,
         ),
       ],
     );
